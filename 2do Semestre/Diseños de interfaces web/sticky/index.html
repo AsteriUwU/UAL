@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sticky</title>
+    <style>
+        /* Definimos la cuadrícula */
+        body {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        /* Asignamos cada elemento a su celda correspondiente */
+        .uno {
+            grid-row: 1 / span 2;
+            grid-column: 1;
+            background-color: red;
+        }
+
+        .divSticky {
+            grid-row: 1;
+            grid-column: 2;
+            background-color: blue;
+        }
+
+        .dos {
+            grid-row: 2;
+            grid-column: 2;
+            background-color: green;
+        }
+
+        .glass {
+            grid-row: 1 / span 2;
+            grid-column: 1 / span 2;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="uno"></div>
+    <div class="divSticky"></div>
+    <div class="dos"></div>
+    <div class="glass"></div>
+</body>
+</html>
